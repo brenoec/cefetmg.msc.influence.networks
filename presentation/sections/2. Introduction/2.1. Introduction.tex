@@ -4,11 +4,79 @@
 \begin{frame}
   \frametitle{Introdução}
 
-  Complex Systems \cite{Sayama:2015:ComplexSystems}
-  \hfill \break
+  \textbf{Imagine o processo de discussão de ideias em uma rede:}
 
-  Numerical Recipes \cite{Press:Numerical:Recipes}
-  \hfill \break
+  \begin{alertblock}{}
+    \vspace{5mm}
 
-  Generalized Box-Müller Method \cite{Tsallis:2007:GeneralizedBoxMuller}
+    \begin{itemize}
+      \item Como modelar a influência de determinados agentes?
+      \item Como se dá a percepção de informações ao longo do tempo?
+      \item Como o surgimento de novas informações afeta essa dinâmica?
+    \end{itemize}
+    \vspace{5mm}
+
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Introdução: Modelo Proposto}
+
+  \textbf{Elaboramos um modelo onde:}
+
+  \begin{alertblock}{}
+    \vspace{5mm}
+
+    \begin{itemize}
+      \item Cada nó da rede tem um valor no intervalo contínuo de [-1, 1];
+      \item Uma ligação $(i, j)$ significa que $i$ recebe informação de $j$;
+      \vspace{5mm}
+
+      \item A influência exercida por um nó é proporcional ao número de nós que
+        recebem informação dele.
+    \end{itemize}
+    \vspace{5mm}
+
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Introdução: Modelo Proposto}
+
+  \textbf{Função discreta para influência $x$ e posicionamento perante
+  uma informação $y$:}
+
+  \begin{alertblock}{}
+
+    \begin{equation}
+      x_{t}(i) = y_{t}(i) \  d_{t}^{r}(i),
+    \end{equation}
+
+    \begin{equation}
+      y_{t+1}(i) = \frac{\sum_{j} \  x_{t}(j)}{\sum_{j} \  d_{t}^{r}(j)},
+    \end{equation}
+
+  \end{alertblock}
+  \vspace{5mm}
+
+  onde $d_{t}^{r}(i)$ é o grau do grafo reverso do nó $i$.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Introdução: Modelo Proposto}
+
+  \textbf{Podemos concluir então que:}
+
+  \begin{alertblock}{}
+    \vspace{5mm}
+
+    \textbf{\alert{O posicionamento de um nó perante uma informação} é a média das
+      influências dos nós adjacentes ponderadas por seus graus.}
+    \vspace{5mm}
+
+    \textbf{\alert{A influência de um nó} é seu posicionamento perante uma
+      informação vezes o seu grau.}
+    \vspace{5mm}
+  \end{alertblock}
+
 \end{frame}

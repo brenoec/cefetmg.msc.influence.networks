@@ -49,17 +49,17 @@
   \begin{alertblock}{}
 
     \begin{equation}
-      x_{t}(i) = y_{t}(i) \  d_{t}^{r}(i),
+      x_{t}(i) = y_{t}(i) \  l_{t}^{r}(i),
     \end{equation}
 
     \begin{equation}
-      y_{t+1}(i) = \frac{\sum_{j} \  x_{t}(j)}{\sum_{j} \  d_{t}^{r}(j)},
+      y_{t+1}(i) = \frac{\sum_{j} \  x_{t}(j)}{\sum_{j} \  l_{t}^{r}(j)},
     \end{equation}
 
   \end{alertblock}
   \vspace{5mm}
 
-  onde $d_{t}^{r}(i)$ é o grau do grafo reverso do nó $i$.
+  onde $l_{t}^{r}(i)$ são as ligações do grafo reverso do nó $i$.
 \end{frame}
 
 \begin{frame}
@@ -70,12 +70,13 @@
   \begin{alertblock}{}
     \vspace{5mm}
 
-    \textbf{\alert{O posicionamento de um nó perante uma informação} é a média das
-      influências dos nós adjacentes ponderadas por seus graus.}
+    \textbf{\alert{O posicionamento de um nó $i$ perante uma informação} é a
+      média das influências dos nós adjacentes ponderadas pelas suas ligações
+      no grafo reverso.}
     \vspace{5mm}
 
-    \textbf{\alert{A influência de um nó} é seu posicionamento perante uma
-      informação vezes o seu grau.}
+    \textbf{\alert{A influência de um nó $i$} é seu posicionamento perante uma
+      informação multiplicada por suas ligações no grafo reverso.}
     \vspace{5mm}
   \end{alertblock}
 

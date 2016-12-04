@@ -1,5 +1,7 @@
 Creator "Breno Souza on Mon Nov 28 2016"
 graph [
+  multigraph 1
+  directed 1
   node [
     id 1
     label "1"

@@ -1,5 +1,7 @@
 Creator "Breno Souza on Mon Nov 28 2016"
 graph [
+  multigraph 1
+  directed 1
   node [
     id 1
     label "1"
@@ -13,7 +15,7 @@ graph [
   node [
     id 3
     label "3"
-    value 1.
+    value -1.
   ]
   node [
     id 4
@@ -33,7 +35,7 @@ graph [
   node [
     id 7
     label "7"
-    value -1.
+    value 1.
   ]
   node [
     id 8
@@ -51,6 +53,10 @@ graph [
   edge [
     source 3
     target 7
+  ]
+  edge [
+    source 7
+    target 3
   ]
   edge [
     source 4

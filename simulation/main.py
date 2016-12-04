@@ -6,7 +6,7 @@ matplotlib.use('TkAgg')
 from pylab import *
 import networkx as nx
 
-path = 11
+path = 11.0
 selfinfluece = 0        # use self-influence?
 treatdataset = 0        # treat dataset?
 
@@ -43,7 +43,7 @@ def initialize():
     if (treatdataset):
         zeros = []
         for i in g.nodes_iter():
-            if (g.node[i]['value'] == 0 || g.node[i]['value'] == -1):
+            if (g.node[i]['value'] == 0 or g.node[i]['value'] == -1):
                 g.node[i]['value'] = -1.
             else:
                 g.node[i]['value'] =  1.

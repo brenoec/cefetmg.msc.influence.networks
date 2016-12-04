@@ -13,6 +13,61 @@
         \cite{Sayama:2015:ComplexSystems}.
       \vspace{5mm}
 
+      \item \alert{\textbf{Utilizamos o módulo \texttt{PyCX}}} para facilitar
+        a simulação e o acompanhamento dos resultados.
+      \vspace{5mm}
+
+      \item \textbf{Implementação referente à simulação} se encontra em
+        \textbf{\texttt{/simulation/main.py}}.
+      \vspace{5mm}
+
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Materiais e Métodos}
+
+  \textbf{O código simulacional recebe três parâmetros:}
+
+  \begin{alertblock}{}
+    \vspace{5mm}
+
+    \begin{itemize}
+      \item \texttt{Path}: Arquivo \texttt{.gml} com rede a ser estudada
+        (default = 11);
+      \vspace{5mm}
+
+      \item \texttt{TreatDataset}: \textit{flag} para sinalizar se os dados
+        referentes à rede devem ser tratados (default = 0);
+      \vspace{5mm}
+
+      \item \texttt{SelfInfluence}: \textit{flag} para sinalizar se a
+        auto-influência deve ser considerada (default = 0).
+      \vspace{5mm}
+
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Materiais e Métodos}
+
+  \textbf{O tratamento dos dados referentes à rede consiste em:}
+
+  \begin{alertblock}{}
+    \vspace{5mm}
+
+    \begin{itemize}
+      \item Remover nós com grau nulo, pois não são pertinentes para a dinâmica;
+      \vspace{5mm}
+
+      \item Transformar os valores dos nós para ponto flutuante;
+      \vspace{5mm}
+
+      \item Se o grafo contem valores -1 ou 0, transforma para -1.0.
+      \vspace{5mm}
+
     \end{itemize}
   \end{alertblock}
 \end{frame}

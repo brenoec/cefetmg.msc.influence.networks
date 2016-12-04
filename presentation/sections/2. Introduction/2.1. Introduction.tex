@@ -65,6 +65,28 @@
 \begin{frame}
   \frametitle{Introdução: Modelo Proposto}
 
+  \textbf{Função discreta para influência $x$ e posicionamento perante
+  uma informação $y$, com auto-influência:}
+
+  \begin{alertblock}{}
+
+    \begin{equation}
+      x_{t}(i) = y_{t}(i) \  l_{t}^{r}(i),
+    \end{equation}
+
+    \begin{equation}
+      y_{t+1}(i) = \frac{x_{t}(i) + \sum_{j} \  x_{t}(j)}{l_{t}^{r}(i) + \sum_{j} \  l_{t}^{r}(j)},
+    \end{equation}
+
+  \end{alertblock}
+  \vspace{5mm}
+
+  onde $l_{t}^{r}(i)$ são as ligações do grafo reverso do nó $i$.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Introdução: Modelo Proposto}
+
   \textbf{Podemos concluir então que:}
 
   \begin{alertblock}{}
